@@ -23,6 +23,7 @@ body {
   padding: 0rem 1rem 0rem 1rem;
   min-height: 100vh;
   width: 35%;
+  min-width: 20rem;
 }
 
 /* The form is the main form of the page */

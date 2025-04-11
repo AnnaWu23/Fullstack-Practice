@@ -1,0 +1,134 @@
+/* border box is a css property that makes the border and padding included in the width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* root means the root of the document */
+/* -- defines a custom property, the example below is a custom property called n, and it is set to 1 */
+:root {
+  --n: 1;
+}
+
+body {
+  --h: 212deg;
+  --l: 43%;
+  /* hsl value: a color can be specified as hue, saturation, lightness */
+  /* var(--l) is a variable that is used to store the lightness value */
+  /* 71% is the saturation value */
+  /* var(--l) is a variable that is used to store the lightness value */
+  /* the h and l values are 212 and 43% respectively */
+  --brandColor: hsl(var(--h), 71%, var(--l));
+  font-family: sans-serif;
+  margin: 0;
+  background-color: white;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* pixels are a unit of measurement for the size of an element */
+/* rem is a unit of measurement for the size of an element */
+/* rem is relative to the root element */
+/* the benefit of using rem is that it is more flexible */
+/* the flexibility is that if the user has a different font size, the rem will adjust to the font size */
+/* Chrome has a default font size of 16px, so 1rem = 16px. The other browsers have a default font size of 10px, so 1rem = 10px */
+ol {
+  list-style: none;
+  padding: 0 1rem;
+  /* define counter */
+  /* The counter is a counter that is used to count the number of items in the list */
+  /* !Missing this will cause the counter to not work */
+  counter-reset: list;
+}
+
+li {
+  /* calculate the stop value for the gradient */
+  /* We have the stop var, which will be used to show the progress of the list */
+  /* You need to divide 100% by the length of the list and multiply it by the current item */
+  /* The length will be 5, var is changing as the list i changing */
+  /* Those varibles has domain, it will take effect in those elements */
+  --stop: calc(100% / var(--length) * var(--i));
+  /* set the counter */
+  /* Those varibles defined in the root element, they are used to calculate the color of the list */
+  --l: 62%;
+  --l2: 88%;
+  --h: calc((var(--i) - 1) * (180 / var(--length)));
+  --c1: hsl(var(--h), 71%, var(--l));
+  --c2: hsl(var(--h), 71%, var(--l2));
+
+  /* The position is relative, so the before element can be positioned absolutely */
+  /* Missing this will cause the before element to not be positioned */
+  /* It'll be positioned relative to the element */
+  position: relative;
+  counter-increment: list;
+  max-width: 45rem;
+  /* left and right margin are auto, so the list is centered */
+  margin: 2rem auto;
+  /* padding 2rem on top, 1rem on bottom, 1rem on left and right */
+  padding: 2rem 1rem 1rem;
+  /* overflow is hidden, so the before element is not visible */
+  overflow: hidden;
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+/* The color progress bar */
+li::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1rem;
+  /* The position is absolute, so the before element is positioned absolutely */
+  /* Missing this will cause the before element to not be positioned */
+  position: absolute;
+  /* top and left are 0, so the before element is positioned at the top left of the element */
+  top: 0;
+  left: 0;
+  /* The linear gradient gives the color of the progress bar */
+  /* it has two values: the direction, the start color, the end color */
+  background: linear-gradient(
+    to right,
+    var(--c1) var(--stop),
+    var(--c2) var(--stop)
+  );
+}
+
+h3 {
+  /* display flex makes  */
+  display: flex;
+  /* align items is baseline, so the before element is aligned to the baseline of the element */
+  align-items: baseline;
+  margin: 0 0 1rem;
+  color: rgb(70, 70, 70);
+}
+
+h3::before {
+  content: counter(list);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: var(--c1);
+  color: white;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* The media query is used to change the style of the element when the width of the screen is 40em or more */
+@media (min-width: 40em) {
+  li {
+    margin: 3rem auto;
+    padding: 3rem 2rem 2rem;
+  }
+  h3 {
+    font-size: 2.25rem;
+    margin: 0 0 2rem;
+  }
+  h3::before {
+    margin-right: 1.5rem;
+  }
+}
