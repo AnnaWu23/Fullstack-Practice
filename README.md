@@ -1,6 +1,7 @@
 # Frontend Practice Projects
 
 A collection of frontend practice projects to showcase various web development skills and techniques.
+[Check live demo](https://annawu23.github.io/Fullstack-Practice/)
 
 ## Projects
 
@@ -8,12 +9,10 @@ A collection of frontend practice projects to showcase various web development s
 
    - A responsive registration form built with HTML, CSS, and JavaScript
    - Features form validation and modern styling
-   - [View Project](Registration_Form/index.html)
 
 2. **Responsive Ordered List**
    - A responsive ordered list implementation
    - Demonstrates CSS Grid and Flexbox techniques
-   - [View Project](Responsive_ol/index.html)
 
 ## Features
 
