@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Responsive Ordered List',
     description: 'A responsive ordered list practice project',
-    path: 'Responsive_ol/index.html',
+    path: './Responsive_ol/index.html',
   },
 ];
 
