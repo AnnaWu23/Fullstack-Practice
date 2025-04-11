@@ -1,4 +1,4 @@
-# Frontend Practice Projects
+# Full-Stack Practice Projects
 
 A collection of frontend practice projects to showcase various web development skills and techniques.
 [Check live demo](https://annawu23.github.io/Fullstack-Practice/)

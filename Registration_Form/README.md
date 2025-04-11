@@ -1,14 +1,14 @@
 # Registration Form Project
 
+[English](README.md) | [中文](README.zh.md)
+
 ## Project Overview
 
-This is a registration form project built with HTML5 and CSS. The project focuses on the basic implementation of form elements and styling.
+This is a registration form project built with HTML5 and CSS3. The project focuses on implementing form elements and styling with modern web development practices.
 
-## Features
+## Technical Features
 
 ### Form Structure
-
-The registration form includes the following fields:
 
 - **Basic Information**
 
@@ -24,29 +24,88 @@ The registration form includes the following fields:
   - Country (dropdown selection)
   - Terms and Conditions (checkbox)
 
+### Form Validation
+
+- HTML5 built-in validation
+- Required field validation
+- Email format validation
+- Password input masking
+
 ### Visual Design
 
-- Clean interface design
+- Clean and modern interface
 - Consistent form element styling
 - Proper spacing and alignment
 - Subtle color scheme
-
-### Interactive Elements
-
-- Hover effects on submit button
-- Basic HTML5 form validation
-- Required field validation
-
-## Tech Stack
-
-- HTML5
-- CSS3
+- Hover and focus states
 
 ## Implementation Highlights
 
-- CSS flexbox for layout
-- Custom form control styling
-- Basic form labels and instructions
+1. **Form Layout**
+
+   - Using CSS flexbox for layout
+   - Responsive form width
+   - Proper form element grouping
+   - Label and input alignment
+
+2. **Input Styling**
+
+   - Custom form control styling
+   - Consistent input field sizes
+   - Clear visual feedback
+   - Error state styling
+
+3. **Interactive Elements**
+
+   - Hover effects on buttons
+   - Focus state indicators
+   - Radio button customization
+   - Checkbox styling
+
+4. **Form Validation**
+   - HTML5 validation attributes
+   - Required field indicators
+   - Input pattern matching
+   - Error message display
+
+## Learning Points
+
+1. **Form Structure**
+
+   - Understanding form element types
+   - Proper form organization
+   - Label and input relationships
+   - Form accessibility
+
+2. **CSS Styling**
+
+   - Form element styling techniques
+   - State-based styling
+   - Consistent design patterns
+   - Visual hierarchy
+
+3. **User Experience**
+   - Form validation feedback
+   - Input field interaction
+   - Error handling
+   - Form submission flow
+
+## How to Run
+
+1. Clone the repository
+2. Open `index.html` in a web browser
+3. Test the form functionality
+
+## Project Learnings
+
+Through this project, I learned:
+
+- HTML form element implementation
+- CSS styling techniques for forms
+- Form validation methods
+- User experience considerations
+- Form accessibility best practices
+- Responsive form design principles
 
 ## Areas for Improvement
 
@@ -54,6 +113,7 @@ The registration form includes the following fields:
 
    - Current form width is fixed at 35%, which doesn't work well on different devices
    - Need to add media queries for mobile device optimization
+   - Could improve form layout on smaller screens
 
 2. **Form Validation**
 
@@ -67,29 +127,17 @@ The registration form includes the following fields:
    - Could add loading state indicators
    - Could add form submission success/failure notifications
    - Could enhance input field focus state visual feedback
+   - Could add form reset functionality
 
 4. **Feature Extensions**
 
    - Could add local storage for form data
-   - Could add form reset functionality
    - Could add remember user information feature
+   - Could add form data export functionality
+   - Could add multi-step form wizard
 
 5. **Code Optimization**
    - Could add CSS variables for unified color and size management
    - Could optimize CSS selectors to reduce code duplication
    - Could add more detailed code comments
-
-## How to Run
-
-1. Clone the repository
-2. Open `index.html` in a web browser
-3. Test the form functionality
-
-## Project Learnings
-
-Through this project, I learned:
-
-- Basic usage of HTML form elements
-- Fundamental principles of CSS styling
-- Basic implementation of form layout and styling
-- Basic form validation methods
+   - Could implement CSS preprocessor for better maintainability
