@@ -7,12 +7,14 @@ A collection of frontend practice projects to showcase various web development s
 
 1. **Registration Form**
 
-   - A responsive registration form built with HTML, CSS, and JavaScript
-   - Features form validation and modern styling
+   - A responsive form built with HTML5 and CSS3
+   - Includes basic and additional information fields
+   - Features form validation and modern UI design
 
 2. **Responsive Ordered List**
-   - A responsive ordered list implementation
-   - Demonstrates CSS Grid and Flexbox techniques
+   - Utilizes advanced CSS features like variables, counters, and pseudo-elements
+   - Implements dynamic color calculation and progress bar effects
+   - Fully responsive design for all devices
 
 ## Features
 
