@@ -12,9 +12,16 @@ A collection of frontend practice projects to showcase various web development s
    - Features form validation and modern UI design
 
 2. **Responsive Ordered List**
+
    - Utilizes advanced CSS features like variables, counters, and pseudo-elements
    - Implements dynamic color calculation and progress bar effects
    - Fully responsive design for all devices
+
+3. **Card UI Design 1**
+   - Modern card design with gradient effects and image overlays
+   - Implements advanced CSS techniques like pseudo-elements and transitions
+   - Features responsive layout and interactive hover effects
+   - Demonstrates modern UI/UX principles
 
 ## Features
 
