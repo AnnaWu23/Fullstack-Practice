@@ -10,6 +10,11 @@ const projects = [
     description: 'A responsive ordered list practice project',
     path: './Responsive_ol/index.html',
   },
+  {
+    title: 'Card UI Design 1',
+    description: 'A responsive card ui design practice project',
+    path: './Card_UI_Design_1/index.html',
+  },
 ];
 
 // Function to create project card
