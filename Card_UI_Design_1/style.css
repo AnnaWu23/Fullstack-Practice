@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Tag selector */
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Class selector */
+.card {
+  width: 400px;
+  min-height: 250px;
+  border-radius: 20px;
+  position: relative;
+  color: white;
+  padding: 40px 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  /* transition can specifically be used to control the transition of the specific property */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-top: 0;
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+.card button {
+  margin-top: auto;
+  color: white;
+  border: 1px solid white;
+  margin-top: 10px;
+  padding: 14px 26px;
+  border-radius: 2px;
+  background-color: transparent;
+  align-self: flex-start;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  /* As we set the pseudo-element before the card, the button will be covered by the pseudo-element */
+  /* if the relative position is not set, the button won't be be triggered
+  because the browser thinks you're hovering over the pseudo-element */
+  /* After setting the relative position, the button will be above the pseudo-element */
+  position: relative;
+}
+
+.card button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Create a pseudo-element before the card, which contains the gradient effect for the image and gradient effect for the card background color */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* mask-image can be used to create a gradient effect */
+  /* The linear-gradient function is used to create a gradient image effect */
+  /* 135deg means the gradient starts from the top left corner and goes to the bottom right corner */
+  /* rgba(0, 0, 0, 0) 0% - the start point is not transparent */
+  /* rgba(0, 0, 0, 0.1) 50% - the 50% point is 10% transparent */
+  /* rgba(0, 0, 0, 0.4) 100% - the end point is 40% transparent */
+  mask-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  /* -webkit-mask-image is used to create a gradient effect on the webkit browser like chrome */
+  -webkit-mask-image: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  background-size: cover;
+}
+
+/* Id selector */
+#card-1 {
+  background: linear-gradient(135deg, #7387ef 0%, #7387ef 30%, #a08ed2 100%);
+}
+
+#card-2 {
+  background: linear-gradient(135deg, #456fe5 0%, #4978d8 30%, #73c2a9 100%);
+}
+
+.card:nth-child(1)::before {
+  background-image: url(./images/meeting.jpg);
+}
+
+.card:nth-child(2)::before {
+  background-image: url(./images/learning.jpg);
+}
+
+/* Different media queries for different screen sizes */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 200px;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .card button {
+    padding: 12px 24px;
+    font-size: 0.7rem;
+  }
+}
