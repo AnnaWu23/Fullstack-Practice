@@ -15,6 +15,11 @@ const projects = [
     description: 'A responsive card ui design practice project',
     path: './Card_UI_Design_1/index.html',
   },
+  {
+    title: 'Card UI Design 2',
+    description: 'A responsive card ui design practice project',
+    path: './Card_UI_Design_2/index.html',
+  },
 ];
 
 // Function to create project card
