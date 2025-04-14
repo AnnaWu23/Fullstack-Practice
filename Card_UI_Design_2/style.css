@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 36px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  width: 480px;
+  min-height: 280px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 35px 30px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card .header .header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.card .header .header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 40px;
+}
+
+.card .header .header-text h3 {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.card .header .header-text p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card .header .rating {
+  letter-spacing: -0.1rem;
+  align-self: flex-start;
+}
+
+.card .header .rating .star {
+  width: 15px;
+  height: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.card > p {
+  padding-top: 25px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+.card:nth-child(1) .avatar {
+  border: 2px solid black;
+}
+
+.card:nth-child(2) .avatar {
+  border: 2px solid white;
+}
+
+.card:nth-child(1) p {
+  color: #616161;
+}
+
+.card:nth-child(1) .header .rating {
+  color: #e9a543;
+}
+
+.card:nth-child(1) .header strong {
+  color: #7d94fd;
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(135deg, #778bea, #ab98de);
+  color: white;
+}
+
+.card:nth-child(2) .header .rating {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  .card > p {
+    padding-top: 15px;
+  }
+  .card .header .header-text h3 {
+    font-size: 0.8rem;
+  }
+  .card .header .header-text p {
+    font-size: 0.7rem;
+  }
+  .card .header {
+    gap: 0;
+  }
+  .card .header .header-left {
+    gap: 5px;
+  }
+  .card .header .header-text {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    font-size: 14px;
+  }
+  .card .header .header-text h3 {
+    font-size: 0.8rem;
+  }
+  .card .header .header-text p {
+    font-size: 0.7rem;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .card .header .rating .star {
+    font-size: 0.7rem;
+  }
+  .card > p {
+    padding-top: 15px;
+    font-size: 0.8rem;
+  }
+}
