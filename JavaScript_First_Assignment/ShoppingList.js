@@ -36,16 +36,51 @@ function printList(shoppingList) {
 printList(shoppingList);
 
 // Task4
-// Function and Object:
-// 1. Create a function that accepts an item name as a parameter and returns whether the item is in the shopping list.
-function isInList(shoppingList, item) {
-  return shoppingList.includes(item);
-}
-console.log('banana is in the list:', isInList(shoppingList, 'banana'));
-console.log('grape is in the list:', isInList(shoppingList, 'grape'));
-// 2. Create a shopping item object, including the item name, price and quantity.
-let item = { name: 'milk' };
-item['price'] = 12;
-item['quantity'] = 1;
+// Destructuring
+// Use destructuring to extract the name and age properties from the person object. Then write a function that destructures the properties of an object in the parameter list.
+let person = {
+  name: 'John',
+  age: 20,
+  city: 'Sydney',
+};
 
-console.log('item:', item);
+let { name, age } = person;
+console.log(name, age);
+
+function printPerson({ name, age, city }) {
+  console.log(name, age, city);
+}
+
+printPerson(person);
+
+// Task5
+// Default Parameters
+// Write a function to calculate the area of a rectangle. If the height is not provided, assume it is a square. Use default parameters to set the default value of height.
+function calculateArea(width = 10, height = 10) {
+  return width * height;
+}
+
+// Task6
+// Rest/Spread Parameters
+// Use the Rest operator to create a function that can add any number of parameters. Then use the Spread operator to merge two arrays.
+function sum(a, b) {
+  return a + b;
+}
+
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+
+// Rest operator
+function sum(...args) {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+
+// Spread operator
+let arr3 = [...arr1, ...arr2];
+console.log(arr3);
