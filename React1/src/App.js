@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseCard from './CourseCard';
+import CourseCardList from './components/CourseCardList';
 import './App.css';
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
       duration: '10 hours',
       location: 'New York',
       isNew: true,
-      imageUrl: 'https://picsum.photos/seed/react/300/200',
+      // Current time as seed for random image
+      imageUrl: `https://picsum.photos/seed/${new Date().getTime()}/300/200`,
     },
     {
       title: 'React Native',
@@ -20,7 +21,9 @@ function App() {
       duration: '10 hours',
       location: 'New York',
       isNew: false,
-      imageUrl: 'https://picsum.photos/seed/native/300/200',
+      imageUrl: `https://picsum.photos/seed/${
+        new Date().getTime() + 1
+      }/300/200`,
     },
     {
       title: 'Frontend Development',
@@ -29,7 +32,9 @@ function App() {
       duration: '20 hours',
       location: 'Beijing',
       isNew: true,
-      imageUrl: 'https://picsum.photos/seed/frontend/300/200',
+      imageUrl: `https://picsum.photos/seed/${
+        new Date().getTime() + 2
+      }/300/200`,
     },
     {
       title: 'Full Stack Development',
@@ -38,27 +43,16 @@ function App() {
       duration: '30 hours',
       location: 'Shanghai',
       isNew: true,
-      imageUrl: 'https://picsum.photos/seed/fullstack/300/200',
+      imageUrl: `https://picsum.photos/seed/${
+        new Date().getTime() + 3
+      }/300/200`,
     },
   ];
 
   return (
     <div className="App">
       <h1>Course List</h1>
-      <div className="course-grid">
-        {courses.map((course) => (
-          <CourseCard
-            key={course.title}
-            title={course.title}
-            price={course.price}
-            language={course.language}
-            duration={course.duration}
-            location={course.location}
-            isNew={course.isNew}
-            imageUrl={course.imageUrl}
-          />
-        ))}
-      </div>
+      <CourseCardList courses={courses} />
     </div>
   );
 }
