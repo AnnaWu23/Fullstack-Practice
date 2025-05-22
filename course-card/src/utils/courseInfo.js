@@ -10,6 +10,7 @@ let courses = [
     // Current time as seed for random image
     imageUrl: `https://picsum.photos/seed/${new Date().getTime()}/300/200`,
     difficulty: 'Beginner',
+    enrolledCount: 0,
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ let courses = [
     isNew: false,
     imageUrl: `https://picsum.photos/seed/${new Date().getTime() + 1}/300/200`,
     difficulty: 'Advanced',
+    enrolledCount: 0,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ let courses = [
     isNew: true,
     imageUrl: `https://picsum.photos/seed/${new Date().getTime() + 2}/300/200`,
     difficulty: 'Intermediate',
+    enrolledCount: 0,
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ let courses = [
     isNew: true,
     imageUrl: `https://picsum.photos/seed/${new Date().getTime() + 3}/300/200`,
     difficulty: 'Advanced',
+    enrolledCount: 0,
   },
 ];
 
@@ -52,5 +56,16 @@ export const fetchCoursesInfo = () => {
     setTimeout(() => {
       resolve([...courses]);
     }, 2000);
+  });
+};
+
+// simulate enroll PUT request
+export const enrollCourse = (courseId) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const course = courses.find((course) => course.id === courseId);
+      course.enrolledCount++;
+      resolve(course);
+    }, 1000);
   });
 };
