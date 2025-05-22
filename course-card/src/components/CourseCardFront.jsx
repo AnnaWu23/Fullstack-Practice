@@ -1,7 +1,7 @@
 import React from 'react';
 import './CourseCard.css';
-
-const CourseCardFront = ({ course, flipToBack }) => {
+import { Button } from '@mui/material';
+const CourseCardFront = ({ course, flipToBack, review }) => {
   return (
     <div className="course-card">
       <div className="course-image">
@@ -19,14 +19,16 @@ const CourseCardFront = ({ course, flipToBack }) => {
           <p className="course-difficulty">Difficulty: {course.difficulty}</p>
         </div>
         <div className="card-button">
-          <button>
+          <Button>
             {course.difficulty === 'Beginner'
               ? 'Start Learning Now!'
               : 'Enroll Now'}
-          </button>
+          </Button>
         </div>
         <div className="card-button">
-          <button onClick={flipToBack}>Leave a Review</button>
+          <Button onClick={flipToBack}>
+            {review ? 'Update your Review' : 'Leave a Review'}
+          </Button>
         </div>
 
         {course.isNew && <span className="course-isNew">New!</span>}

@@ -5,10 +5,20 @@ import CourseCardBack from './CourseCardBack';
 
 const CourseCard = ({ course }) => {
   const [isFront, setIsFront] = useState(true);
+  const [review, setReview] = useState('');
   return isFront ? (
-    <CourseCardFront course={course} flipToBack={() => setIsFront(false)} />
+    <CourseCardFront
+      course={course}
+      flipToBack={() => setIsFront(false)}
+      review={review}
+    />
   ) : (
-    <CourseCardBack course={course} flipToFront={() => setIsFront(true)} />
+    <CourseCardBack
+      course={course}
+      flipToFront={() => setIsFront(true)}
+      review={review}
+      setReview={setReview}
+    />
   );
 };
 

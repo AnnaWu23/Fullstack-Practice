@@ -13,8 +13,16 @@
   transition: transform 0.2s ease-in-out;
   background-color: white;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
+.course-card-back {
+  padding: 40px 24px 10px 24px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .course-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -134,11 +142,25 @@
 .card-button {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .review-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  flex: 1;
+  gap: 16px;
+  padding: 20px;
+}
+
+.review-textfield {
+  flex: 1;
+}
+
+.review-textfield .MuiInputBase-root {
+  height: 100%;
+}
+
+.review-textfield .MuiInputBase-input {
+  height: 100% !important;
 }
