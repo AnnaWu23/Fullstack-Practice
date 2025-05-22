@@ -47,6 +47,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 0px;
+  height: 55px;
 }
 
 .course-title {
@@ -56,10 +57,9 @@
   line-height: 1.3;
   width: fit-content;
   text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
+  overflow: hidden;
 }
 
 .course-price {
@@ -77,26 +77,19 @@
   line-height: 1.5;
   text-align: left;
 }
-
+/* 
 .course-info {
   display: flex;
   gap: 10px;
   margin-top: 4px;
   flex-wrap: wrap;
-}
+} */
 
 .course-info p {
-  background: #f0f0f0;
-  color: #333;
-  border-radius: 8px;
-  padding: 0px 8px;
-  font-size: 0.8rem;
-  text-align: center;
+  padding: 0px 0px;
+  font-size: 0.85rem;
   margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 22px;
 }
 
 .course-isNew {
@@ -136,4 +129,16 @@
   color: #666;
   font-style: italic;
   margin-top: 8px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
